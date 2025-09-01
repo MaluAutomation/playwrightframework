@@ -1,0 +1,41 @@
+{
+  "languages": ["English", "हिन्दी", "Français", "Español"],
+  "translations": {
+    "English": {
+      "username": "Username",
+      "password": "Password",
+      "language": "Language",
+      "welcome": "Welcome to BiteBridge 🍴",
+      "menuItems": ["🍕 Pizza", "🥗 Salads", "🍔 Burgers", "🍜 Noodles", "🍰 Desserts", "🥤 Beverages"],
+      "footer": "© 2025 BiteBridge. All rights reserved.",
+      "addedMsg": "Pizza added to cart!"
+    },
+    "हिन्दी": {
+      "username": "यूज़रनेम",
+      "password": "पासवर्ड",
+      "language": "भाषा",
+      "welcome": "बाइटब्रिज में आपका स्वागत है 🍴",
+      "menuItems": ["🍕 पिज़्ज़ा", "🥗 सलाद", "🍔 बर्गर", "🍜 नूडल्स", "🍰 मिठाइयाँ", "🥤 पेय पदार्थ"],
+      "footer": "© 2025 बाइटब्रिज। सर्वाधिकार सुरक्षित।",
+      "addedMsg": "पिज़्ज़ा कार्ट में जोड़ा गया!"
+    },
+    "Français": {
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "language": "Langue",
+      "welcome": "Bienvenue chez BiteBridge 🍴",
+      "menuItems": ["🍕 Pizza", "🥗 Salades", "🍔 Burgers", "🍜 Nouilles", "🍰 Desserts", "🥤 Boissons"],
+      "footer": "© 2025 BiteBridge. Tous droits réservés.",
+      "addedMsg": "Pizza ajoutée au panier !"
+    },
+    "Español": {
+      "username": "Nombre de usuario",
+      "password": "Contraseña",
+      "language": "Idioma",
+      "welcome": "Bienvenido a BiteBridge 🍴",
+      "menuItems": ["🍕 Pizza", "🥗 Ensaladas", "🍔 Hamburguesas", "🍜 Fideos", "🍰 Postres", "🥤 Bebidas"],
+      "footer": "© 2025 BiteBridge. Todos los derechos reservados.",
+      "addedMsg": "¡Pizza agregada al carrito!"
+    }
+  }
+}

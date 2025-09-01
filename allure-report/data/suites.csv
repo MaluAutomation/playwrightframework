@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","4714","🌐 Validate homepage UI for Français","chromium","Fri Aug 08 16:46:56 IST 2025","passed","Fri Aug 08 16:47:01 IST 2025","","HomeTestPage.spec.js","",""
+"","4658","🌐 Validate homepage UI for Español","chromium","Fri Aug 08 16:46:56 IST 2025","passed","Fri Aug 08 16:47:01 IST 2025","","HomeTestPage.spec.js","",""
+"","4673","🌐 Validate homepage UI for हिन्दी","chromium","Fri Aug 08 16:46:56 IST 2025","passed","Fri Aug 08 16:47:01 IST 2025","","HomeTestPage.spec.js","",""
+"","4659","🌐 Validate homepage UI for English","chromium","Fri Aug 08 16:46:56 IST 2025","passed","Fri Aug 08 16:47:01 IST 2025","","HomeTestPage.spec.js","",""
