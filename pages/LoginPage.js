@@ -32,11 +32,11 @@ exports.LoginPage = class LoginPage {
     await this.page.waitForTimeout(500); // Optional: replace with smarter wait
   }
 
-  async loginDetails(uname, pwd) {
+  async loginDetails(uname ,pwd) {
+  console.log('username is',uname)
     await this.page.locator(this.userNameInput).fill(uname);
-    await this.page.locator(this.passwdInput).fill(pwd);
-
-  }
+  await this.page.locator(this.passwdInput).fill(pwd);
+}
 
   async validateLabels(expectedLabels) {
     const usernameText = await this.page.locator(this.userNameLabel).innerText();

@@ -8,8 +8,9 @@ dotenv.config(); // Load .env variables
 const browserType = process.env.BROWSER;
 const headed = process.env.HEADED === 'true';
 const baseUrl = process.env.BASE_URL;
-const username = process.env.USERNAME;
-const password = process.env.PASSWORD;
+const username = process.env.PLAYWRIGHT_USERNAME;
+const password = process.env.PLAYWRIGHT_PASSWORD;
+;
 
 if (!baseUrl) throw new Error('BASE_URL is missing from .env file');
 
