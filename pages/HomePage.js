@@ -1,11 +1,14 @@
 const { expect } = require('@playwright/test');
+const { HomePageSection } = require('../sections/HomePageSection');
+
 
 exports.HomePage = class HomePage {
   constructor(page) {
     this.page = page;
+    this.section = new HomePageSection(page); 
     this.headingSelector = '#welcome-text';
-    this.menuItemSelector = '.menu-item'; // Adjust if needed
-   
+    this.menuItemSelector = '.menu-item'; 
+
   }
 
   async getSelectedLanguage() {
@@ -25,15 +28,16 @@ exports.HomePage = class HomePage {
     expect(actualHeading.trim()).toContain(expectedHeading);
   }
 
-  async validateMenuItems(translations) {
-    const selectedLanguage = await this.getSelectedLanguage();
+
+    async validateMenuItems(translations) {
+    const selectedLanguage = await this.page.evaluate(() => localStorage.getItem('selectedLanguage'));
     const expectedItems = translations[selectedLanguage]?.menuItems;
 
     if (!expectedItems || expectedItems.length === 0) {
       throw new Error(`Missing or empty 'menuItems' translation for language: ${selectedLanguage}`);
     }
 
-    const actualItems = await this.page.locator(this.menuItemSelector).allInnerTexts();
+    const actualItems = await this.section.getMenuItemTexts(); // Calling the method
     const trimmedActual = actualItems.map(item => item.trim());
 
     console.log(`✅ Validating menu items for ${selectedLanguage}`);
@@ -42,23 +46,23 @@ exports.HomePage = class HomePage {
 
     expect(trimmedActual).toEqual(expectedItems);
   }
-async clickPizzaItem(translations) {
-  const selectedLanguage = await this.getSelectedLanguage();
-  const menuItems = translations[selectedLanguage]?.menuItems;
+  async clickPizzaItem(translations) {
+    const selectedLanguage = await this.getSelectedLanguage();
+    const menuItems = translations[selectedLanguage]?.menuItems;
 
-  if (!menuItems || menuItems.length === 0) {
-    throw new Error(`❌ No menu items found for language: ${selectedLanguage}`);
+    if (!menuItems || menuItems.length === 0) {
+      throw new Error(`❌ No menu items found for language: ${selectedLanguage}`);
+    }
+
+    const pizzaLabel = menuItems.find(item => item.includes('🍕'));
+
+    if (!pizzaLabel) {
+      throw new Error(`🍕 No Pizza item found in menu for language: ${selectedLanguage}`);
+    }
+
+    const pizzaButton = this.page.locator('.menu-item', { hasText: pizzaLabel });
+    await expect(pizzaButton).toBeVisible();
+    await pizzaButton.click();
   }
-
-  const pizzaLabel = menuItems.find(item => item.includes('🍕'));
-
-  if (!pizzaLabel) {
-    throw new Error(`🍕 No Pizza item found in menu for language: ${selectedLanguage}`);
-  }
-
-  const pizzaButton = this.page.locator('.menu-item', { hasText: pizzaLabel });
-  await expect(pizzaButton).toBeVisible();
-  await pizzaButton.click();
-}
 
 };

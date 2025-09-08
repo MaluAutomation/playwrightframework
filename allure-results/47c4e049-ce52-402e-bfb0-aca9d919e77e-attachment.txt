@@ -1,0 +1,19 @@
+username is malu
+✅ Validating heading for Español: Bienvenido a BiteBridge 🍴
+✅ Validating menu items for Español
+Expected: [
+  '🍕 Pizza',
+  '🥗 Ensaladas',
+  '🍔 Hamburguesas',
+  '🍜 Fideos',
+  '🍰 Postres',
+  '🥤 Bebidas'
+]
+Actual: [
+  '🍕 Pizza',
+  '🥗 Ensaladas',
+  '🍔 Hamburguesas',
+  '🍜 Fideos',
+  '🍰 Postres',
+  '🥤 Bebidas'
+]

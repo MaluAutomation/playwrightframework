@@ -1,0 +1,12 @@
+username is malu
+✅ Validating heading for Français: Bienvenue chez BiteBridge 🍴
+✅ Validating menu items for Français
+Expected: [
+  '🍕 Pizza',
+  '🥗 Salades',
+  '🍔 Burgers',
+  '🍜 Nouilles',
+  '🍰 Desserts',
+  '🥤 Boissons'
+]
+Actual: [ 'Pizza', 'Salades', 'Burgers', 'Nouilles', 'Desserts', 'Boissons' ]

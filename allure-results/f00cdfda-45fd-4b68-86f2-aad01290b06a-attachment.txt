@@ -1,0 +1,12 @@
+username is malu
+✅ Validating heading for English: Welcome to BiteBridge 🍴
+✅ Validating menu items for English
+Expected: [
+  '🍕 Pizza',
+  '🥗 Salads',
+  '🍔 Burgers',
+  '🍜 Noodles',
+  '🍰 Desserts',
+  '🥤 Beverages'
+]
+Actual: [ 'Pizza', 'Salads', 'Burgers', 'Noodles', 'Desserts', 'Beverages' ]
